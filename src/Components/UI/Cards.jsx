@@ -5,12 +5,12 @@ import { TbFileInvoice } from "react-icons/tb";
 
 export default function Cards() {
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 pt-4 space-y-8">
       {/* Top Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Card 1 */}
         <div className="bg-[#fae0d7] rounded-lg p-4 flex items-center ">
-          <div className="bg-[#e66239] p-3 rounded-md mr-8 mb-15">
+          <div className="bg-[#e66239] p-3 rounded-md mr-4">
             <LuClipboardList className="h-6 w-6 text-white" />
           </div>
           <div>
@@ -25,7 +25,7 @@ export default function Cards() {
 
         {/* Card 2 */}
         <div className="bg-[#ccf1f8] rounded-lg p-4 flex items-center">
-          <div className="bg-[#00c951] p-3 rounded-md mr-4 mb-15">
+          <div className="bg-[#00c951] p-3 rounded-md mr-4">
             <FaArrowsRotate className="h-6 w-6 text-white" />
           </div>
           <div>
@@ -41,7 +41,7 @@ export default function Cards() {
 
         {/* Card 3 */}
         <div className="bg-[#ccf4dc] rounded-lg p-4 flex items-center">
-          <div className="bg-[#00b8db] p-3 rounded-md mr-4 mb-15">
+          <div className="bg-[#00b8db] p-3 rounded-md mr-4">
             <BsCurrencyDollar className="h-6 w-6 text-white" />
           </div>
           <div>
@@ -56,7 +56,7 @@ export default function Cards() {
 
         {/* Card 4 */}
         <div className="bg-[#fcefcc] rounded-lg p-4 flex items-center">
-          <div className="bg-[#f0b100] p-3 rounded-md mr-4 mb-15">
+          <div className="bg-[#f0b100] p-3 rounded-md mr-4">
             <TbFileInvoice className="h-6 w-6 text-white" />
           </div>
           <div>

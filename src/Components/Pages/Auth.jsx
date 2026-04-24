@@ -5,14 +5,14 @@ import ForgotPassword from "../Auth/ForgotPassword";
 import ResetPassword from "../Auth/ResetPassword";
 import OTP from "../Auth/OTP";
 
-export default function Home() {
+export default function Auth() {
   return (
     <div>
-     <SignIn/>
-     <SignUp/>
-     <ForgotPassword/>
-     <ResetPassword/>
-     <OTP/>
+      <SignIn />
+      <SignUp />
+      <ForgotPassword />
+      <ResetPassword />
+      <OTP />
     </div>
   );
 }
