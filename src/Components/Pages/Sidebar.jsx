@@ -7,10 +7,13 @@ import { MdOutlineErrorOutline } from "react-icons/md";
 import { GrDocumentText } from "react-icons/gr";
 import { IoLogOutOutline } from "react-icons/io5";
 import { PiSignOutFill } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
-    const [sidebarOpen] = useState(true);
+  const [sidebarOpen] = useState(true);
+
+  const activeLink = "flex items-center p-2 rounded bg-[#fae0d7] text-[#fb2c36]";
+  const normalLink = "flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36] text-[#262626]";
 
   return (
     <div className="flex h-screen ">
@@ -18,124 +21,124 @@ export default function Sidebar() {
       {sidebarOpen && (
         <aside className="w-64 bg-white border-r border-gray-300 p-2">
           {/* Logo */}
-          <div className="flex justify-center mb-6">
+          <div className="flex px-4 py-4 mb-2">
             <img
               src="/images/logo.png"
               alt="Logo"
-              className="w-15 h-8 mr-20 mt-4"
+              className="h-10 w-auto"
             />
           </div>
-          <hr className="mb-6 " />
+          <hr className="mb-4 border-gray-200" />
 
           {/* Main Section */}
           <h4 className="text-md mb-2 ml-3 text-[#262626]">Main</h4>
           <nav className="space-y-2">
             {/* 1 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <PiHouseLine />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Dashboard
               </h1>
-            </a>
+            </NavLink>
             {/* 2 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/inventory"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <LuBox />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Inventory
               </h1>
-            </a>
+            </NavLink>
             {/* 3 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/add-product"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <MdAdd />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Add Product
               </h1>
-            </a>
+            </NavLink>
             {/* 4 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/reports"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <TbReportSearch />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Reports
               </h1>
-            </a>
+            </NavLink>
             {/* 5 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/404"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <MdOutlineErrorOutline />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 404 Error
               </h1>
-            </a>
+            </NavLink>
             {/* 6 */}
-            <a
-              href="#"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/docs"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <GrDocumentText />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Docs
               </h1>
-            </a>
+            </NavLink>
           </nav>
 
           {/* Account Section */}
           <h4 className="text-md mt-6 mb-2 text-[#262626]">Account</h4>
           <nav className="space-y-2">
-            
+
             {/* 1 */}
-            <Link
-              to="signIn"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/signin"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <IoLogOutOutline />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 sign in
               </h1>
-            </Link>
+            </NavLink>
 
             {/* 2 */}
-            <Link
-              to="signUp"
-              className="flex items-center p-2 rounded hover:bg-[#fae0d7] hover:text-[#fb2c36]"
+            <NavLink
+              to="/signup"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
               <span className="mr-2 text-2xl">
                 <PiSignOutFill />
               </span>
-              <h1 className="text-md font-medium text-[#262626] hover:text-[#fb2c36]">
+              <h1 className="text-md font-medium">
                 Sign up
               </h1>
-            </Link>
+            </NavLink>
           </nav>
         </aside>
       )}
- </div>
+    </div>
   );
 }
